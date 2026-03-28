@@ -140,7 +140,17 @@ main section:not(.hero) { border-bottom: 1px solid #eee; }
 }
 
 .video-item, .audio-item { margin: 0; max-width: 640px; }
-.video-item video { width: 100%; height: auto; }
+.video-item {
+    margin: 0;
+    flex: 1 1 300px;
+    max-width: 640px;
+}
+
+.video-item video {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
 .video-item figcaption, .audio-item figcaption { padding: 8px 0; font-size: 0.9rem; color: #555; }
 .audio-item audio { width: 100%; max-width: 500px; }
 .location-section iframe { width: 100%; max-width: 800px; height: 450px; border: none; }
