@@ -1,50 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore our media gallery featuring video productions, audio samples, client testimonials, and studio location.">
     <title>Media Gallery</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <div class="top">
+    <header class="site-header">
         <h1>Media Gallery</h1>
-        <div class="nav">
+        <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="media.html">Media</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div>
-        <h2>Video Showcase</h2>
-        
-        <!-- First video - missing controls and fallback -->
-        <video src="media/sample1.mp4" width="640" height="360"></video>
-        
-        <!-- Second video missing entirely -->
-    </div>
-    
-    <div>
-        <h2>Audio Sample</h2>
-        <!-- Audio element missing completely -->
-        <p>Listen to our audio production quality.</p>
-    </div>
-    
-    <div>
-        <h2>Location</h2>
-        <!-- iframe missing completely -->
-        <p>Visit our studio at 123 Media Street</p>
-    </div>
-    
-    <div>
-        <h2>Client Testimonials</h2>
-        <img src="images/client1.jpg">
-        <img src="images/client2.jpg">
-        <!-- Missing figure/figcaption semantic markup -->
-    </div>
-    
-    <div class="bottom">
+        </nav>
+    </header>
+
+    <main>
+        <section class="video-section">
+            <h2>Video Showcase</h2>
+            <div class="video-container">
+                <figure class="video-item">
+                    <video controls width="640" height="360">
+                        <source src="media/sample1.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                    <figcaption>Corporate Showreel 2024</figcaption>
+                </figure>
+                <figure class="video-item">
+                    <video controls width="640" height="360">
+                        <source src="media/sample2.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                    <figcaption>Behind the Scenes Documentary</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="audio-section">
+            <h2>Audio Sample</h2>
+            <p>Listen to our audio production quality.</p>
+            <figure class="audio-item">
+                <audio controls>
+                    <source src="media/sample-audio.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <figcaption>Studio Recording Demo</figcaption>
+            </figure>
+        </section>
+
+        <section class="location-section">
+            <h2>Location</h2>
+            <p>Visit our studio at 28 Madison St, Jeppestown, Johannesburg</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.7!2d28.0565!3d-26.2023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950e5e5e5e5e5d%3A0x5e5e5e5e5e5e5e5e!2s28%20Madison%20St%2C%20Jeppestown%2C%20Johannesburg%2C%202043!5e0!3m2!1sen!2sza!4v1700000000000"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                title="Media Production Studio Location - 28 Madison St, Jeppestown, Johannesburg">
+            </iframe>
+        </section>
+
+        <section class="testimonials-section">
+            <h2>Client Testimonials</h2>
+            <div class="testimonials-grid">
+                <figure class="testimonial-item">
+                    <img src="images/client1.jpg" alt="Portrait of client John Davis from XYZ Corp">
+                    <figcaption>John Davis, XYZ Corp: "Exceptional video quality and creative direction."</figcaption>
+                </figure>
+                <figure class="testimonial-item">
+                    <img src="images/client2.jpg" alt="Portrait of client Sarah Miller from ABC Media">
+                    <figcaption>Sarah Miller, ABC Media: "Professional audio production that exceeded expectations."
+                    </figcaption>
+                </figure>
+                <figure class="testimonial-item">
+                    <img src="images/client3.jpg" alt="Portrait of client Tom Wilson from Creative Studios">
+                    <figcaption>Tom Wilson, Creative Studios: "Outstanding photography for our entire campaign."
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <p>Email: contact@mediaproduction.com</p>
-    </div>
+        <p>Phone: 555-0123</p>
+        <p>&copy; 2024 Media Production Company. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
