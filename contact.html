@@ -1,40 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact our media production team for quotes, bookings, and project inquiries.">
     <title>Contact</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
+    <header class="site-header">
         <h1>Contact Us</h1>
-        <div class="nav">
+        <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="media.html">Media</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div>
-        <h2>Get In Touch</h2>
-        
-        <!-- Form with multiple errors -->
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Phone">
-            <textarea placeholder="Message"></textarea>
-            
-            <!-- Missing: labels, proper input types (email, tel), validation attributes -->
-            <!-- Missing: radio buttons, checkboxes, select/dropdown, date/number inputs -->
-            <!-- Missing: fieldset for grouping -->
-            
-            <button>Submit</button>
-        </form>
-    </div>
-    
-    <div class="bottom">
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Get In Touch</h2>
+
+            <form action="#" method="POST" id="contact-form">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required minlength="2" maxlength="100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="e.g. 0712345678" pattern="[0-9]{10}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="website">Website URL</label>
+                        <input type="url" id="website" name="website" placeholder="https://example.com">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Project Details</legend>
+
+                    <div class="form-group">
+                        <label for="service-type">Service Type</label>
+                        <select id="service-type" name="service-type" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="video">Video Production</option>
+                            <option value="audio">Audio Recording</option>
+                            <option value="photography">Photography</option>
+                            <option value="web">Web Media</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Budget (R)</label>
+                        <input type="number" id="budget" name="budget" min="100" max="50000" step="100" placeholder="Enter your budget">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Priority Level</label>
+                        <div class="radio-group">
+                            <input type="radio" id="priority-low" name="priority" value="low" required>
+                            <label for="priority-low">Low</label>
+
+                            <input type="radio" id="priority-medium" name="priority" value="medium">
+                            <label for="priority-medium">Medium</label>
+
+                            <input type="radio" id="priority-high" name="priority" value="high">
+                            <label for="priority-high">High</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Additional Services</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="editing" name="services" value="editing">
+                            <label for="editing">Video Editing</label>
+
+                            <input type="checkbox" id="colour-grading" name="services" value="colour-grading">
+                            <label for="colour-grading">Colour Grading</label>
+
+                            <input type="checkbox" id="sound-mix" name="services" value="sound-mix">
+                            <label for="sound-mix">Sound Mixing</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Message</legend>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell us about your project" required minlength="10" maxlength="500"></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <aside class="contact-info">
+            <h3>Office Hours</h3>
+            <p>Monday to Friday: 08:00 to 17:00</p>
+            <p>Saturday: 09:00 to 13:00</p>
+            <p>Sunday: Closed</p>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
         <p>Email: contact@mediaproduction.com</p>
-    </div>
+        <p>Phone: 555-0123</p>
+        <p>&copy; 2024 Media Production Company. All rights reserved.</p>
+    </footer>
 </body>
 </html>

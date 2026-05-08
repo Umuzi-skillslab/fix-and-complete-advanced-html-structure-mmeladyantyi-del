@@ -1,49 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about our media production team, services, and portfolio of professional work.">
     <title>About Us</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="top">
+    <header class="site-header">
         <h1>About Our Services</h1>
-        <div class="nav">
+        <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="media.html">Media</a>
             <a href="contact.html">Contact</a>
-        </div>
-    </div>
-    
-    <div>
-        <h2>Our Team</h2>
-        <p>We are a team of experienced media professionals dedicated to creating high-quality content.</p>
-    </div>
-    
-    <div>
-        <h2>Services</h2>
-        <!-- Flexbox layout should be here but using basic divs -->
-        <div>
-            <h3>Video Production</h3>
-            <p>Professional video creation for corporate and creative projects.</p>
-        </div>
-        <div>
-            <h3>Audio Recording</h3>
-            <p>Studio-quality audio production and editing services.</p>
-        </div>
-        <!-- Missing third service -->
-    </div>
-    
-    <div>
-        <h2>Portfolio</h2>
-        <!-- Grid gallery missing - just basic layout -->
-        <img src="images/work1.jpg">
-        <img src="images/work2.jpg">
-        <img src="images/work3.jpg">
-    </div>
-    
-    <div class="bottom">
+        </nav>
+    </header>
+
+    <main>
+        <section class="team-section">
+            <h2>Our Team</h2>
+            <article class="team-info">
+                <p>We are a team of experienced media professionals dedicated to creating high-quality content. With over a decade of combined experience, our specialists deliver outstanding results across video, audio, and photography.</p>
+            </article>
+        </section>
+
+        <section class="services-section">
+            <h2>Services</h2>
+            <div class="services-flex">
+                <article class="service-card">
+                    <h3>Video Production</h3>
+                    <p>Professional video creation for corporate and creative projects.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Audio Recording</h3>
+                    <p>Studio quality audio production and editing services.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Photography</h3>
+                    <p>Capturing your brand through professional photography and visual storytelling.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="portfolio-section">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <figure class="portfolio-item">
+                    <img src="images/work1.jpg" alt="Corporate video production for annual conference">
+                    <figcaption>Corporate Conference Video</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/work2.jpg" alt="Music video production in outdoor setting">
+                    <figcaption>Music Video Production</figcaption>
+                </figure>
+                <figure class="portfolio-item">
+                    <img src="images/work3.jpg" alt="Product photography for e-commerce catalogue">
+                    <figcaption>Product Photography</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <p>Email: contact@mediaproduction.com</p>
-    </div>
+        <p>Phone: 555-0123</p>
+        <p>&copy; 2024 Media Production Company. All rights reserved.</p>
+    </footer>
 </body>
 </html>
